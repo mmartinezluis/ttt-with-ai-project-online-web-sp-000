@@ -50,7 +50,7 @@ class Players::Computer
         else
           input= "5"
         end
-      end
+      #end
 
         #  me = array.detect {|i| board.cells[i] == self.token || (board.cells[i] != self.token && board.cells[i] != " ")}
       #    raw_input = array.detect {|i| board.cells[i] == self.token || (board.cells[i] != self.token && board.cells[i] != " ")}
@@ -76,8 +76,8 @@ class Players::Computer
 end
 
 
-#input = nil
-#array= [0,1,2,3,4]
-#board= ["X"," ","X"," "," "]
-#index = board.detect {|i| i == " "}
-#input= i
+input = nil
+array= [0,1,2,3,4]
+board= ["X"," ","X"," "," "]
+index = board.detect {|i| i == " "}
+input= i
