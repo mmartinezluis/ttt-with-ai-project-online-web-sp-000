@@ -48,7 +48,7 @@ class Players::Computer
 
         else
           input = "5"
-
+          board.update(input,self.token)
         end
 
       end
