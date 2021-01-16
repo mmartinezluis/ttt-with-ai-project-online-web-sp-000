@@ -68,7 +68,7 @@ class Players::Computer
 
       #  else
       #    input = "5"
-
+    end
       input
   end
 
