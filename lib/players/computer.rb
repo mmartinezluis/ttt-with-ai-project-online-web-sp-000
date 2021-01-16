@@ -78,3 +78,5 @@ end
 
 
 array= [1,2,3,4,5]
+board-["X","X","X"," "]
+index = (array - [3]).sample until board[index] == " "
