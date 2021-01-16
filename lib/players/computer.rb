@@ -30,7 +30,7 @@ class Players::Computer
           if array.index(raw_input) > 1 || array.index(raw_input) < 1
             input= "#{array[1]+1}"
           else
-            input="#{array[0]+1}"
+            input= array - 
           end
 
         elsif board.cells.count {|i| i != self.token && i != " "} == 1
