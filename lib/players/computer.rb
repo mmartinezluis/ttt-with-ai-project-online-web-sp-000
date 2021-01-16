@@ -1,6 +1,7 @@
 require_relative '../players/concerns/Players'
 #require_relative '../player'
 class Players::Computer
+  attr_accessor :board
 
   WIN_COMBINATIONS = [
     [0,1,2],
