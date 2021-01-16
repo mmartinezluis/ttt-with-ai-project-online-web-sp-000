@@ -41,7 +41,7 @@ class Players::Computer
             if board.cells[]
         #  me = array.detect {|i| board.cells[i] == self.token || (board.cells[i] != self.token && board.cells[i] != " ")}
           raw_input = array.detect {|i| board.cells[i] == self.token || (board.cells[i] != self.token && board.cells[i] != " ")}
-        
+
 
         elsif board.cells.count {|i| i != self.token && i != " "} == 1
           unwanted= nil
