@@ -49,6 +49,8 @@ class Game
       #  binding.pry
     input=current_player.move(board)              #"Current_player.move(board)"" asks for input from player_1
     if board.taken?(input)
+      puts "Position already taken"
+    elsif !board.valid_move?(input)
       board.update(input, current_player) || turn
       puts "Board"
       board.display
