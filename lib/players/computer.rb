@@ -42,7 +42,12 @@ class Players::Computer
             if board.cells[4] == " "
               input = "5"
             else
-              input = ([*1..9] - [raw_input+1]).sample.to_s
+              index = ([0..8] - [raw_input]).sample
+              if board.cells[index] == " "
+                input = (index+1).to_s
+              end
+            end
+          end
         #  me = array.detect {|i| board.cells[i] == self.token || (board.cells[i] != self.token && board.cells[i] != " ")}
           raw_input = array.detect {|i| board.cells[i] == self.token || (board.cells[i] != self.token && board.cells[i] != " ")}
 
