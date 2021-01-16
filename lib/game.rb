@@ -62,6 +62,8 @@ class Game
 
   def play
     #binding.pry
+    puts "Enter your move"
+    board.display
     turn until over?
     if won?
       puts "Congratulations #{winner}!"
