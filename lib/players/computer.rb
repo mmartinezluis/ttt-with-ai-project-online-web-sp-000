@@ -20,11 +20,11 @@ class Players::Computer
     raw_input = nil
     binding.pry
     WIN_COMBINATIONS.each do |array|
-        if array.count {|i| board.cells[i] != self.token && board.cells[i] != " "} > 1
+        if array.count {|i| board.cells[i] == self.token} > 1
           raw_input = array.detect {|i| board.cells[i] == " "}
           input = "#{raw_input+1}"
 
-        elsif array.count {|i| board.cells[i] == self.token} > 1
+        elsif array.count {|i| board.cells[i] != self.token && board.cells[i] != " "} > 1
           raw_input = array.detect {|i| board.cells[i] == " "}
           input = "#{raw_input+1}"
 
@@ -46,7 +46,7 @@ class Players::Computer
               input = (index+1).to_s
             end
           end
-          
+
         else
           input= "5"
         #  me = array.detect {|i| board.cells[i] == self.token || (board.cells[i] != self.token && board.cells[i] != " ")}
