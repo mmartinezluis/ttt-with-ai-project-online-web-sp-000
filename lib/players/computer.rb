@@ -1,3 +1,4 @@
+require_all 'lib'
 class Players::Computer
 
   def move(board)
