@@ -1,5 +1,5 @@
 require_relative '../players/concerns/Players'
-require_relative '../player'
+#require_relative '../player'
 class Players::Computer
 
   WIN_COMBINATIONS = [
