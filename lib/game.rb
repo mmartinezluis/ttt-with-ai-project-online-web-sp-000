@@ -67,12 +67,12 @@ class Game
   end
 
   def start
-    "Welcome to Tic Tac Toe"
-    "What kind of game would you like to play?"
-    "0 players: Computer_1 Vs Computer_2 \nEnter 0 \n1 player: Human Vs Computer \nEnter 1\n 2 players: Player 1 Vs Player 2 \nEnter 2"
+  puts  "Welcome to Tic Tac Toe"
+  puts  "What kind of game would you like to play?"
+  puts  "0 players: Computer_1 Vs Computer_2 \nEnter 0 \n1 player: Human Vs Computer \nEnter 1\n 2 players: Player 1 Vs Player 2 \nEnter 2"
     play_mode = gets.strip.to_i
     play_mode
-    "Who should go first and be X?"
+  puts  "Who should go first and be X?"
 
     case play_mode
       when 0
@@ -95,7 +95,7 @@ class Game
     "Would you like to play again?"
     "If 'Yes' enter 'Y' ; if 'No' enter 'N'"
     decision= gets.strip
-    if decision == "Y"  
+    if decision == "Y"
       start
     end
 
