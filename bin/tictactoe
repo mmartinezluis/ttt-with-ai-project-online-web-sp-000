@@ -27,7 +27,7 @@ def start
       first == 1 ? Game.new.play : Game.new(Players::Human.new("O"), Players::Human.new("X"))
     end
 
-  end
+end
 
   start
 
