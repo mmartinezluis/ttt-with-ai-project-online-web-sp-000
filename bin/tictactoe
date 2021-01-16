@@ -9,7 +9,7 @@ def start
   play_mode = gets.strip.to_i
   play_mode
   "Who should go first and be X?"
-  
+
   case play_mode
     when 0
       "Computer 1: Enter 1;  Computer_2: Enter 2"
@@ -32,4 +32,5 @@ def start
   "If 'Yes' enter 'Y' ; if 'No' enter 'N'"
   decision= gets.strip
   decision == "Y" ? start : break
+  
 end
