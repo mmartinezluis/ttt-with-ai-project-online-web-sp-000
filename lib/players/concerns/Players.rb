@@ -1,4 +1,4 @@
-require_all 'lib'
+
 module Players
   class Human <Player
   end
