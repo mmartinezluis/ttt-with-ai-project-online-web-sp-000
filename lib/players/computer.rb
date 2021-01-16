@@ -11,7 +11,7 @@ class Players::Computer
     [1,4,7],
     [2,5,8],
     [0,4,8],
-    [2,4,6]
+    [6,4,2]
   ]
 
   def move(board)
@@ -27,8 +27,8 @@ class Players::Computer
         elsif array.count {|i| board.cells[i] != self.token && board.cells[i] != " "} > 1
           raw_input = array.detect {|i| board.cells[i] == " "}
           input = "#{raw_input+1}"
-
-        elsif array.count {|i| board.cells[i] == " "} == 2
+#WIN_COMBINATIONS.each do |array|
+        if array.count {|i| board.cells[i] == " "} == 2
           if array.include? (self.token)
             raw_input= array.detect {|i| board.cells[i] == self.token}
               if array.index(raw_input) > 1 || array.index(raw_input) < 1
@@ -37,6 +37,10 @@ class Players::Computer
                 index= (array - [raw_input]).sample
                 input= (index+1).to_s
               end
+        #    end
+        #  end
+        #end
+
           else
             raw_input= array.detect {|i| board.cells[i] != " "}
             if board.cells[4] == " "
@@ -50,7 +54,7 @@ class Players::Computer
         else
           input= "5"
         end
-    # end
+  #   end
     #  board.update(input,self)
 
         #  me = array.detect {|i| board.cells[i] == self.token || (board.cells[i] != self.token && board.cells[i] != " ")}
