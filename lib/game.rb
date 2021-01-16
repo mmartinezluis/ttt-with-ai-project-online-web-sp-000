@@ -51,6 +51,7 @@ class Game
     if board.taken?(input)
       puts "Position already taken"
     elsif !board.valid_move?(input)
+      puts "Enter a number between 1 and 9"
       board.update(input, current_player) || turn
       puts "Board"
       board.display
