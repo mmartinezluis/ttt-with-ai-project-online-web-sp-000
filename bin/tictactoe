@@ -34,7 +34,7 @@ puts "Welcome to Tic Tac Toe"
   puts "If 'Yes' enter 'Y' ; if 'No' enter 'N'"
   decision= gets.strip
   if decision == "Y"
-    start
+    
   else
     puts "See you!"
   end
