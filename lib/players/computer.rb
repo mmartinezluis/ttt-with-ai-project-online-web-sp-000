@@ -51,7 +51,7 @@ class Players::Computer
           input= "5"
         end
       end
-  
+
         #  me = array.detect {|i| board.cells[i] == self.token || (board.cells[i] != self.token && board.cells[i] != " ")}
       #    raw_input = array.detect {|i| board.cells[i] == self.token || (board.cells[i] != self.token && board.cells[i] != " ")}
 
@@ -68,10 +68,6 @@ class Players::Computer
 
       #  else
       #    input = "5"
-
-        end
-
-      end
 
       input
   end
