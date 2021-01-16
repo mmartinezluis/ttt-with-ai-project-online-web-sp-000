@@ -95,7 +95,9 @@ class Game
     "Would you like to play again?"
     "If 'Yes' enter 'Y' ; if 'No' enter 'N'"
     decision= gets.strip
-    decision == "Y" ? start : break
+    if decision == "Y"  
+      start
+    end
 
   end
 
