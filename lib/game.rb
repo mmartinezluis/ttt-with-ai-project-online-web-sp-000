@@ -96,7 +96,7 @@ class Game
     "If 'Yes' enter 'Y' ; if 'No' enter 'N'"
     decision= gets.strip
     decision == "Y" ? start : break
-    
+
   end
 
 
