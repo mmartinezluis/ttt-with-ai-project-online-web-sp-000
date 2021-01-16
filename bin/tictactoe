@@ -29,6 +29,7 @@ def start
 
 end
 
+start 
   puts "Game is over!"
   puts "Would you like to play again?"
   puts "If 'Yes' enter 'Y' ; if 'No' enter 'N'"
