@@ -34,7 +34,7 @@ end
   puts "If 'Yes' enter 'Y' ; if 'No' enter 'N'"
   decision= gets.strip
   if decision == "Y"
-    puts "Ok"
+    start
   else
     puts "See you!"
   end
