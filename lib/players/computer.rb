@@ -33,9 +33,7 @@ class Players::Computer
           else
             input= (array - [raw_input]).sample.to_s
           end
-
       
-
         elsif board.cells.count {|i| i != self.token && i != " "} == 1
           unwanted= nil
           board.cells.each do |element|
