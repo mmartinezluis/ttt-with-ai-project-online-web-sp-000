@@ -76,12 +76,12 @@ class Game
 
     case play_mode
       when 0
-        "Computer 1: Enter 1;  Computer_2: Enter 2"
+        "Computer 1: Enter 1;  Computer 2: Enter 2"
         first= gets.strip.to_i
         first == 1 ? Game.new(Players::Computer.new("X"), Players::Computer.new("O")) : Game.new(Players::Computer.new("O"), Players::Computer.new("X"))
         Game.play
       when 1
-        "Human: Enter 1;  Compouter: Enter 2"
+        "Human: Enter 1;  Computer: Enter 2"
         first= gets.strip.to_i
         first == 1 ? Game.new(Players::Human.new("X"), Players::Computer.new("O")) : Game.new(Players::Human.new("O"), Players::Computer.new("X"))
         Game.play
