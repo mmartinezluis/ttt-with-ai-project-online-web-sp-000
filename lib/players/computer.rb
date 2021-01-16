@@ -78,7 +78,7 @@ end
 
 input = nil
 array= [0,1,2,3,4]
-board-["X","X","X"," "," "]
-index = (array - [3]).sample
-index until board[index] == " "
+board= ["X"," ","X"," "," "]
+
+index = (array - [3]).sample until board[index] == " "
 input= index
