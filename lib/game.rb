@@ -50,11 +50,15 @@ class Game
     input=current_player.move(board)              #"Current_player.move(board)"" asks for input from player_1
     if board.taken?(input)
       puts "Position already taken"
+      turn
     elsif !board.valid_move?(input)
       puts "Enter a number between 1 and 9"
-      board.update(input, current_player) || turn
+      turn
+    elsif board.valid_move?(input)
+      board.update(input, current_player)
       puts "Board"
       board.display
+
 
         #METHOD 2: LONG METHOD
   #  input=current_player.move(board)
