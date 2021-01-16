@@ -1,4 +1,4 @@
-require_relative '../players/concerns/Players'
+#require_relative '../players/concerns/Players'
 require_all 'lib'
 class Players::Computer
   attr_accessor :board
