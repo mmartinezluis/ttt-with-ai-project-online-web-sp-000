@@ -25,7 +25,7 @@ puts  "Who should go first and be X?"
       puts "Player 1: Enter 1;  Player 2: Enter 2"
       first= gets.strip.to_i
       first == 1 ? Game.new.play : Game.new(Players::Human.new("O"), Players::Human.new("X"))
-    
+
     end
 
   puts "Would you like to play again?"
