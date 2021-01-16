@@ -72,7 +72,7 @@ class Game
   def play
     #binding.pry
     board.display
-    puts "Enter your move"
+    puts "Enter a number between 1 and 9"
     turn until over?
     if won?
       puts "Congratulations #{winner}!"
