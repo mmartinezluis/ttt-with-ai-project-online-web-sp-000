@@ -58,6 +58,7 @@ class Game
       board.update(input, current_player)
       puts "Board"
       board.display
+    end
 
 
         #METHOD 2: LONG METHOD
