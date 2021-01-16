@@ -42,7 +42,7 @@ class Players::Computer
             if board.cells[4] == " "
               input = "5"
             else
-              index = ([0..8] - [raw_input]).sample
+              index = ([0..8] - [raw_input]).sample until board.cells[index] == " "
               if board.cells[index] == " "
                 input = (index+1).to_s
 
