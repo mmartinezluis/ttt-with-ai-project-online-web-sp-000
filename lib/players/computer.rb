@@ -34,7 +34,8 @@ class Players::Computer
               if array.index(raw_input) > 1 || array.index(raw_input) < 1
                 input= "#{array[1]+1}"
               else
-                input= (array - [raw_input]).sample.to_s
+                index= (array - [raw_input]).sample
+                input= (index+1).to_s
               end
           else
             raw_input= array.detect {|i| board.cells[i] != " "}
