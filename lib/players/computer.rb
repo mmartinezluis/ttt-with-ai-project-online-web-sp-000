@@ -1,5 +1,5 @@
-require_relative '../lib/players/concerns/Players'
-require_relative '../lib/player'
+require_relative '../players/concerns/Players'
+require_relative '../player'
 class Players::Computer
 
   WIN_COMBINATIONS = [
