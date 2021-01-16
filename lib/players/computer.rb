@@ -36,7 +36,7 @@ class Players::Computer
         elsif board.cells.count {|i| i != self.token && i != " "} == 1
           unwanted= nil
           board.cells.each do |element|
-            if element != self.token && element!= " "
+            if element != self.token && element != " "
               unwanted = board.cells.index(element)
             end
           end
