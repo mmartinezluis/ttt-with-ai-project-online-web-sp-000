@@ -16,7 +16,7 @@ class Players::Computer
     #binding.pry
     input = nil
     raw_input = nil
-    binding.pry
+    #binding.pry
     WIN_COMBINATIONS.each do |array|
         if array.count {|i| board.cells[i] != self.token && board.cells[i] != " "} > 1
           raw_input = array.detect {|i| board.cells[i] == " "}
@@ -33,7 +33,7 @@ class Players::Computer
           else
             input= (array - [raw_input]).sample.to_s
           end
-      
+
         elsif board.cells.count {|i| i != self.token && i != " "} == 1
           unwanted= nil
           board.cells.each do |element|
