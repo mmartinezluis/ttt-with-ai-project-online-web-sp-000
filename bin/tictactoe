@@ -20,7 +20,7 @@ puts  "Who should go first and be X?"
       puts "Human: Enter 1;  Computer: Enter 2"
       first= gets.strip.to_i
       first == 1 ? Game.new(Players::Human.new("X"), Players::Computer.new("O")).play : Game.new(Players::Human.new("O"), Players::Computer.new("X")).play
-      binding.pry
+    #  binding.pry
     when 2
       puts "Player 1: Enter 1;  Player 2: Enter 2"
       first= gets.strip.to_i
