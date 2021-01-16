@@ -42,8 +42,8 @@ class Board
 
   def taken?(input)
     position(input) == "X" || position(input) == "O"
-    index= input.to_i-1
-    @cells[index] != " "
+  #  index= input.to_i-1
+  #  @cells[index] != " "
   end
 
   def valid_move?(input)
