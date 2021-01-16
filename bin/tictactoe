@@ -32,5 +32,5 @@ puts  "Who should go first and be X?"
   puts "If 'Yes' enter 'Y' ; if 'No' enter 'N'"
   decision= gets.strip
   if decision == "Y"
-    start
+    ruby bin/tictactoe
   end
