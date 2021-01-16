@@ -33,10 +33,10 @@ class Players::Computer
             input="#{array[0]+1}"
           end
 
-        elsif board.cells.count {|i| i != self.token && i != " "} = 1
+        elsif board.cells.count {|i| i != self.token && i != " "} == 1
           unwanted= nil
           board.cells.each do |element|
-            if element == "X"
+            if element != self.token && element!= " "
               unwanted = board.cells.index(element)
             end
           end
