@@ -51,7 +51,7 @@ class Game
     if board.taken?(input)
       board.update(input, current_player) || turn
       board.display
-      puts "Enter your next move"
+      puts "Board"
         #METHOD 2: LONG METHOD
   #  input=current_player.move(board)
   #  if board.update(input,current_player)
