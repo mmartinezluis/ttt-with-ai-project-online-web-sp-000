@@ -45,6 +45,7 @@ class Players::Computer
               index = ([0..8] - [raw_input]).sample
               if board.cells[index] == " "
                 input = (index+1).to_s
+                
               end
             end
           end
