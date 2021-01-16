@@ -2,5 +2,8 @@
 
 require_relative '../config/environment'
 
-new_game= Game.new
-new_game.start
+
+
+'hELLO'
+#new_game= Game.new
+#new_game.start
