@@ -15,7 +15,7 @@ class Players::Computer
   def move(board)
     binding.pry
     input = nil
-    ras_input = nil
+    raw_input = nil
     WIN_COMBINATIONS.each do |array|
         if array.count {|i| board.cells[i] != self.token && board.cells[i] != " "} > 1
           raw_input = array.detect {|i| board.cells[i] == " "}
