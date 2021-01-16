@@ -26,7 +26,7 @@ puts  "Who should go first and be X?"
       first= gets.strip.to_i
       first == 1 ? Game.new.play : Game.new(Players::Human.new("O"), Players::Human.new("X"))
     end
-
+  puts "Game is over!"
   puts "Would you like to play again?"
   puts "If 'Yes' enter 'Y' ; if 'No' enter 'N'"
   decision= gets.strip
