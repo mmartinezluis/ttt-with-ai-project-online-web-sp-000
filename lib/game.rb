@@ -52,7 +52,7 @@ class Game
       puts "Position already taken"
       turn
     elsif !board.valid_move?(input)
-      puts "Enter a number between 1 and 9"
+      puts "Invalid input; enter a number between 1 and 9"
       turn
     elsif board.valid_move?(input)
       board.update(input, current_player)
