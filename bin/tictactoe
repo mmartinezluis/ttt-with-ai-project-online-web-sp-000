@@ -4,7 +4,7 @@ require_relative '../config/environment'
 
 puts "Welcome to Tic Tac Toe"
 
-def start
+#def start
   puts  "What kind of game would you like to play?"
   puts  "0 players: Computer_1 Vs Computer_2 \nEnter 0 \n1 player: Human Vs Computer \nEnter 1\n2 players: Player 1 Vs Player 2 \nEnter 2"
     play_mode = gets.strip.to_i
@@ -27,7 +27,7 @@ def start
       first == 1 ? Game.new.play : Game.new(Players::Human.new("O"), Players::Human.new("X"))
   end
 
-end
+#end
 
   puts "Game is over!"
   puts "Would you like to play again?"
