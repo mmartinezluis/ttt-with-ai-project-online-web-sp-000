@@ -1,4 +1,4 @@
-require_relative '../concerns/Players'
+require_relative '../lib/players/concerns/Players'
 class Players::Computer
 
   WIN_COMBINATIONS = [
