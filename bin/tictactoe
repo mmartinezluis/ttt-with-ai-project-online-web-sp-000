@@ -10,5 +10,5 @@ require_relative '../config/environment'
 #  play_mode = gets.strip.to_i
 #  play_mode
 #  puts "Who should go first and be X?"
-#new_game= Game.new
-#new_game.start
+new_game= Game.new
+new_game.start
