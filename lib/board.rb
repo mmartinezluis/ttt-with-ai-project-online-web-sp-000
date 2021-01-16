@@ -41,6 +41,7 @@ class Board
   end
 
   def taken?(input)
+    position(input) == "X" || position(input) == "O"
     index= input.to_i-1
     @cells[index] != " "
   end
