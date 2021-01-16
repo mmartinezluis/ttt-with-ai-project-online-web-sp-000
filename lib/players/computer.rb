@@ -72,7 +72,7 @@ class Players::Computer
         end
 
       end
-      
+
       input
   end
 
