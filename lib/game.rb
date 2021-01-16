@@ -48,9 +48,10 @@ class Game
         #METHOD 1: SHORT METHOD
       #  binding.pry
     input=current_player.move(board)              #"Current_player.move(board)"" asks for input from player_1
-    board.update(input, current_player) || turn
-    board.display
-    puts "Enter your next move"
+    if board.taken?(input) 
+      board.update(input, current_player) || turn
+      board.display
+      puts "Enter your next move"
         #METHOD 2: LONG METHOD
   #  input=current_player.move(board)
   #  if board.update(input,current_player)
