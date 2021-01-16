@@ -49,21 +49,21 @@ class Players::Computer
             end
           end
         #  me = array.detect {|i| board.cells[i] == self.token || (board.cells[i] != self.token && board.cells[i] != " ")}
-          raw_input = array.detect {|i| board.cells[i] == self.token || (board.cells[i] != self.token && board.cells[i] != " ")}
+      #    raw_input = array.detect {|i| board.cells[i] == self.token || (board.cells[i] != self.token && board.cells[i] != " ")}
 
 
-        elsif board.cells.count {|i| i != self.token && i != " "} == 1
-          unwanted= nil
-          board.cells.each do |element|
-            if element != self.token && element != " "
-              unwanted = board.cells.index(element)
-            end
-          end
-          raw_input= ([*1..9] - [unwanted]).sample
-          input ="#{raw_input}"
+      #  elsif board.cells.count {|i| i != self.token && i != " "} == 1
+      #    unwanted= nil
+      #    board.cells.each do |element|
+      #      if element != self.token && element != " "
+      #        unwanted = board.cells.index(element)
+      #      end
+      #    end
+      #    raw_input= ([*1..9] - [unwanted]).sample
+      #    input ="#{raw_input}"
 
-        else
-          input = "5"
+      #  else
+      #    input = "5"
 
         end
 
