@@ -58,6 +58,7 @@ class Game
   end
 
   def play
+    binding.pry
     turn until over?
     if won?
       puts "Congratulations #{winner}!"
@@ -65,7 +66,7 @@ class Game
       puts "Cat's Game!"
     end
   end
-binding.pry
+
 
 
 end
