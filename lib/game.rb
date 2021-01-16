@@ -47,7 +47,7 @@ class Game
   def turn
         #METHOD 1: SHORT METHOD
     input=current_player.move(board)              #"Current_player.move(board)"" asks for input from player_1
-    board.update(input,current_player) || turn
+    board.update(input, current_player) || turn
         #METHOD 2: LONG METHOD
   #  input=current_player.move(board)
   #  if board.update(input,current_player)
