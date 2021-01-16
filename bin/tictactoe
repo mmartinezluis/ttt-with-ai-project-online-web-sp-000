@@ -32,4 +32,6 @@ puts  "Who should go first and be X?"
   decision= gets.strip
   if decision == "Y"
     start
+  else
+    puts "See you!"
   end
