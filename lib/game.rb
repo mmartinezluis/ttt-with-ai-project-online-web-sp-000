@@ -48,6 +48,7 @@ class Game
         #METHOD 1: SHORT METHOD
     input=current_player.move(board)              #"Current_player.move(board)"" asks for input from player_1
     board.update(input, current_player) || turn
+    binding.pry
         #METHOD 2: LONG METHOD
   #  input=current_player.move(board)
   #  if board.update(input,current_player)
@@ -58,7 +59,7 @@ class Game
   end
 
   def play
-    binding.pry
+
     turn until over?
     if won?
       puts "Congratulations #{winner}!"
