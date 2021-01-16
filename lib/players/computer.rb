@@ -16,7 +16,7 @@ class Players::Computer
     binding.pry
     input = nil
     ras_input = nil
-    game.WIN_COMBINATIONS.each do |array|
+    WIN_COMBINATIONS.each do |array|
         if array.count {|i| board.cells[i] != self.token && board.cells[i] != " "} > 1
           raw_input = array.detect {|i| board.cells[i] == " "}
           input = "#{raw_input+1}"
