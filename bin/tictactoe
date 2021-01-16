@@ -13,7 +13,7 @@ puts  "Who should go first and be X?"
     when 0
       puts "Computer 1: Enter 1;  Computer 2: Enter 2"
       first= gets.strip.to_i
-      first == 1 ? Game.new(Players::Computer.new("X").play, Players::Computer.new("O")).play : Game.new(Players::Computer.new("O"), Players::Computer.new("X").play)
+      first == 1 ? Game.new(Players::Computer.new("X").play, Players::Computer.new("O")).play : Game.new(Players::Computer.new("O"), Players::Computer.new("X")).play
       #binding.pry
 
     when 1
