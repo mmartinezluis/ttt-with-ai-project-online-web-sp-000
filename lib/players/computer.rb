@@ -13,7 +13,7 @@ class Players::Computer
   ]
 
   def move(board)
-    binding.pry
+    #binding.pry
     input = nil
     raw_input = nil
     WIN_COMBINATIONS.each do |array|
