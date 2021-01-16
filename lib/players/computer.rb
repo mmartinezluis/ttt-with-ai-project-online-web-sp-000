@@ -76,8 +76,8 @@ class Players::Computer
 end
 
 
-input = nil
-array= [0,1,2,3,4]
-board= ["X"," ","X"," "," "]
-index = board.detect {|i| i == " "}
-input= i
+#input = nil
+#array= [0,1,2,3,4]
+#board= ["X"," ","X"," "," "]
+#index = board.detect {|i| i == " "}
+#input= i
