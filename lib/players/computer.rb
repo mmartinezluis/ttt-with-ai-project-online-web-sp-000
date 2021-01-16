@@ -27,12 +27,14 @@ class Players::Computer
           input = "#{raw_input+1}"
 
         elsif array.count {|i| board.cells[i] == " "} == 2
-          raw_input = array.detect {|i| board.cells[i] == self.token}
+          raw_input = array.detect {|i| board.cells[i] == self.token || (board.cells[i] != self.token && board.cells[i] != " "}
           if array.index(raw_input) > 1 || array.index(raw_input) < 1
             input= "#{array[1]+1}"
           else
             input= (array - [raw_input]).sample.to_s
           end
+        end
+      end
 
         elsif board.cells.count {|i| i != self.token && i != " "} == 1
           unwanted= nil
@@ -55,3 +57,6 @@ class Players::Computer
 
 
 end
+
+array = [1,2,3,4,5]
+
