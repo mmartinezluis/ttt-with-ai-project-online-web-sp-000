@@ -50,7 +50,7 @@ class Players::Computer
           input = "5"
 
         end
-        board.update(input,self.token)
+        board.update(input, self)
       end
       input
   end
