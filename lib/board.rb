@@ -47,8 +47,8 @@ class Board
   end
 
   def valid_move?(input)
-    index= input.to_i-1
-    (0..8).include?(index) && !taken?(input)
+    #index= input.to_i-1
+    (0..8).include?(input.to_i-1) && !taken?(input)
   end
 
   def update(input, player)
