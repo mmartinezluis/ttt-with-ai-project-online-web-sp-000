@@ -27,7 +27,7 @@ class Players::Computer
           input = "#{raw_input+1}"
 
         elsif array.count {|i| board.cells[i] == " "} == 2
-          raw_input = array.detect {|i| board.cells[i] == self.token || (board.cells[i] != self.token && board.cells[i] != " "}
+          raw_input = array.detect {|i| board.cells[i] == self.token || (board.cells[i] != self.token && board.cells[i] != " ")}
           if array.index(raw_input) > 1 || array.index(raw_input) < 1
             input= "#{array[1]+1}"
           else
