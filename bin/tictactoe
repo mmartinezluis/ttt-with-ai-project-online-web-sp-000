@@ -24,7 +24,7 @@ puts "Welcome to Tic Tac Toe"
     when 2
       puts "Player 1: Enter 1;  Player 2: Enter 2"
       first= gets.strip.to_i
-      first == 1 ? Game.new.play : Game.new(Players::Human.new("O"), Players::Human.new("X"))
+      first == 1 ? Game.new.play : Game.new(Players::Human.new("O"), Players::Human.new("X")).play
   end
 
 #end
