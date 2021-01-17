@@ -29,25 +29,25 @@ class Players::Computer
 
         elsif array.count {|i| board.cells[i] == " "} == 2                               # Choose an winning array that contains a single token, whether of myslef or the opposite player
           if array.any? {|i| board.cells[i] == self.token}                                  # If the selected winning array contians one token of myself
-            raw_input= array.detect {|i| board.cells[i] == self.token}                      # find the index in the winning array containg the token of myself
-              if array.index(raw_input) > 1 || array.index(raw_input) < 1                   # if the token of myself is not in the center posiiton, whether within a row or a column
-                input= "#{array[1]+1}"                                                      # set the next move input equal to the center position for that column or row
-              else                                                                          # if the token of myslef is in the center position within a column or row
-                index= (array - [raw_input]).sample                                         # choose a random index witihn the winning array that does not include the center position
-                input= (index+1).to_s                                                       # Add 1 to the chosen index and set it equal to the nest move's input
+            raw_input= array.detect {|i| board.cells[i] == self.token}                        # find the index in the winning array containg the token of myself
+              if array.index(raw_input) > 1 || array.index(raw_input) < 1                     # if the token of myself is not in the center posiiton, whether within a row or a column
+                input= "#{array[1]+1}"                                                        # set the next move input equal to the center position for that column or row
+              else                                                                            # if the token of myslef is in the center position within a column or row
+                index= (array - [raw_input]).sample                                           # choose a random index witihn the winning array that does not include the center position
+                input= (index+1).to_s                                                         # Add 1 to the chosen index and set it equal to the nest move's input
               end
-          else                                                                           # If a winning array contains one token, and the token is not of myself
-            raw_input= array.detect {|i| board.cells[i] != " "}                             # Find the position of that token within the chosen array
-            if board.cells[4] == " "                                                        # if the toekn is not at position 5 in the board
-              input = "5"                                                                   # make my next move's input at position 5 in the board
+          else                                                                              # If a winning array contains one token, and the token is not of myself
+            raw_input= array.detect {|i| board.cells[i] != " "}                               # Find the position of that token within the chosen array
+            if board.cells[4] == " "                                                          # if the toekn is not at position 5 in the board
+              input = "5"                                                                     # make my next move's input at position 5 in the board
             else
-              index = board.cells.index(" ")                                                # if the oposite player's token is at position 5 on the board, find an emtpy space, randomly
-              input = (index+1).to_s                                                        # make my nest move's input t the radmo empty space
+              index = board.cells.index(" ")                                                # if the oposite player's token is at position 5 on the board, find an emppy space, randomly
+              input = (index+1).to_s                                                        # make my nest move's input equual to the radom empty space
             end
           end
 
         elsif board.cells.all? {|i| i == " "}                                             #  If the board is clear
-          input= "5"                                                                      # Tkae position 5 in the board
+          input= "5"                                                                      # Take position 5 in the board
         end
     end
 
