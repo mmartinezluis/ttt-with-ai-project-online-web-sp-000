@@ -1,3 +1,42 @@
 #!/usr/bin/env ruby
-
+require "pry"
 require_relative '../config/environment'
+
+puts "Welcome to Tic Tac Toe!"
+
+def start
+  puts  "\nWhat kind of game would you like to play?"
+  puts  "0 players: Computer_1 Vs Computer_2 \nEnter 0 \n1 player: Human Vs Computer \nEnter 1\n2 players: Player 1 Vs Player 2 \nEnter 2"
+    play_mode = gets.strip.to_i
+
+  puts  "Who should go first and be X?"
+
+  case play_mode
+    when 0
+      puts "Computer 1: Enter 1;  Computer 2: Enter 2"
+      first= gets.strip.to_i
+      first == 1 ? Game.new(Players::Computer.new("X"), Players::Computer.new("O")).play : Game.new(Players::Computer.new("O"), Players::Computer.new("X")).play
+    when 1
+      puts "Human: Enter 1;  Computer: Enter 2"
+      first= gets.strip.to_i
+      first == 1 ? Game.new(Players::Human.new("X"), Players::Computer.new("O")).play : Game.new(Players::Computer.new("O"), Players::Human.new("X")).play
+    #  binding.pry
+    when 2
+      puts "Player 1: Enter 1;  Player 2: Enter 2"
+      first= gets.strip.to_i
+      first == 1 ? Game.new.play : Game.new(Players::Human.new("O"), Players::Human.new("X")).play
+  end
+
+end
+
+start
+
+  puts "Game is over!"
+  puts "Would you like to play again?"
+  puts "If 'Yes' enter 'y' ; if 'No' enter 'N'"
+  decision= gets.strip
+  if decision == "y"
+    start
+  else
+    puts "See you!"
+  end

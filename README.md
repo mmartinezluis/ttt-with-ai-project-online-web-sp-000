@@ -1,3 +1,54 @@
+
+computer player testing method
+
+input=nil
+WIN_COMBINATIONS.select do |array|
+  if (array.count {|i| board.cells[i] != self.token && board.cells[i] != " "} > 1) && (array.any? {|i| board.cells[i] == " "})
+    raw_input = array.detect {|i| board.cells[i] == " "}
+    input = "#{raw_input+1}"
+  end
+end
+
+
+  input=nil
+  WIN_COMBINATIONS.select do |array|
+      if (array.count {|i| board.cells[i] == self.token} > 1) && (array.any? {|i| board.cells[i] == " "})
+        raw_input = array.detect {|i| board.cells[i] == " "}
+        input = "#{raw_input+1}"
+      end
+    end
+
+
+    input=nil
+    raw_input= nil
+    WIN_COMBINATIONS.select do |array|
+    if array.count {|i| board.cells[i] == " "} == 2
+      if array.any? {|i| board.cells[i] == self.token}
+        raw_input= array.detect {|i| board.cells[i] == self.token}
+        if array.index(raw_input) > 1 || array.index(raw_input) < 1
+          input= "#{array[1]+1}"
+        else
+          index= (array - [raw_input]).sample
+          input= (index+1).to_s
+        end
+      else
+        raw_input= array.detect {|i| board.cells[i] != " "}
+        if board.cells[4] == " "
+          input = "5"
+        else
+          index = board.cells.index(" ")
+          input = (index+1).to_s
+        end
+      end
+    elsif board.cells.all? {|i| i == " "}
+      input= "5"
+    end
+  end
+
+
+
+
+
 # Tic-tac-toe with AI
 
 ## Objectives
